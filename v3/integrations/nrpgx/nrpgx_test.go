@@ -6,7 +6,7 @@ package nrpgx
 import (
 	"testing"
 
-	newrelic "github.com/facily-tech/go-agent/v3/newrelic"
+	newrelic "github.com/newrelic/go-agent/v3/newrelic"
 )
 
 func TestParseDSN(t *testing.T) {

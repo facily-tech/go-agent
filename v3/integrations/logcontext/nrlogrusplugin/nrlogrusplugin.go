@@ -18,7 +18,7 @@
 // supported.  However, if the field key collides with one of the keys used by
 // the New Relic Formatter, the value will be overwritten.  Reserved keys are
 // those found in the `logcontext` package
-// (https://godoc.org/github.com/facily-tech/go-agent/v3/integrations/logcontext/#pkg-constants).
+// (https://godoc.org/github.com/newrelic/go-agent/v3/integrations/logcontext/#pkg-constants).
 //
 // Supported types for `logger.WithField` and `logger.WithFields` field values
 // are numbers, booleans, strings, and errors.  Func types are dropped and all
@@ -26,7 +26,7 @@
 //
 // Requires v1.4.0 of the Logrus package or newer.
 //
-// # Configuration
+// Configuration
 //
 // For the best linking experience be sure to enable Distributed Tracing:
 //
@@ -57,7 +57,7 @@
 //	ctx := newrelic.NewContext(context.Background(), txn)
 //	logger.WithContext(ctx).Info("Hello New Relic!")
 //
-// # Troubleshooting
+// Troubleshooting
 //
 // When properly configured, your log statements will be in JSON format with
 // one message per line:
@@ -74,10 +74,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/facily-tech/go-agent/v3/integrations/logcontext"
-	"github.com/facily-tech/go-agent/v3/internal"
-	"github.com/facily-tech/go-agent/v3/internal/jsonx"
-	newrelic "github.com/facily-tech/go-agent/v3/newrelic"
+	"github.com/newrelic/go-agent/v3/integrations/logcontext"
+	"github.com/newrelic/go-agent/v3/internal"
+	"github.com/newrelic/go-agent/v3/internal/jsonx"
+	newrelic "github.com/newrelic/go-agent/v3/newrelic"
 	"github.com/sirupsen/logrus"
 )
 

@@ -1,7 +1,6 @@
 // Copyright 2020 New Relic Corporation. All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-//go:build go1.13
 // +build go1.13
 
 package newrelic
@@ -10,7 +9,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/facily-tech/go-agent/v3/internal"
+	"github.com/newrelic/go-agent/v3/internal"
 )
 
 func TestNoticedWrappedError(t *testing.T) {

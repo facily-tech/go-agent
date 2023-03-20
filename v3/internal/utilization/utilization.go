@@ -3,6 +3,7 @@
 
 // Package utilization implements the Utilization spec, available at
 // https://source.datanerd.us/agents/agent-specs/blob/master/Utilization.md
+//
 package utilization
 
 import (
@@ -11,8 +12,8 @@ import (
 	"runtime"
 	"sync"
 
-	"github.com/facily-tech/go-agent/v3/internal/logger"
-	"github.com/facily-tech/go-agent/v3/internal/sysinfo"
+	"github.com/newrelic/go-agent/v3/internal/logger"
+	"github.com/newrelic/go-agent/v3/internal/sysinfo"
 )
 
 const (

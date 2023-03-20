@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/facily-tech/go-agent/v3/internal"
-	"github.com/facily-tech/go-agent/v3/internal/cat"
+	"github.com/newrelic/go-agent/v3/internal"
+	"github.com/newrelic/go-agent/v3/internal/cat"
 )
 
 func TestShouldSaveTrace(t *testing.T) {

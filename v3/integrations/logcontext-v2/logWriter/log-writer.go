@@ -4,9 +4,9 @@ import (
 	"context"
 	"io"
 
-	"github.com/facily-tech/go-agent/v3/integrations/logcontext-v2/nrwriter"
-	"github.com/facily-tech/go-agent/v3/internal"
-	"github.com/facily-tech/go-agent/v3/newrelic"
+	"github.com/newrelic/go-agent/v3/integrations/logcontext-v2/nrwriter"
+	"github.com/newrelic/go-agent/v3/internal"
+	"github.com/newrelic/go-agent/v3/newrelic"
 )
 
 type LogWriter struct {

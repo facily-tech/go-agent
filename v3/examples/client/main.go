@@ -1,5 +1,6 @@
 // Copyright 2020 New Relic Corporation. All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
+//
 package main
 
 import (
@@ -8,7 +9,7 @@ import (
 	"os"
 	"time"
 
-	newrelic "github.com/facily-tech/go-agent/v3/newrelic"
+	newrelic "github.com/newrelic/go-agent/v3/newrelic"
 )
 
 func doRequest(txn *newrelic.Transaction) error {

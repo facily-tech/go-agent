@@ -4,8 +4,8 @@
 package nrpkgerrors_test
 
 import (
-	"github.com/facily-tech/go-agent/v3/integrations/nrpkgerrors"
-	newrelic "github.com/facily-tech/go-agent/v3/newrelic"
+	"github.com/newrelic/go-agent/v3/integrations/nrpkgerrors"
+	newrelic "github.com/newrelic/go-agent/v3/newrelic"
 	"github.com/pkg/errors"
 )
 

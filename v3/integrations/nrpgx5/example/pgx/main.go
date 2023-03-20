@@ -7,9 +7,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/facily-tech/go-agent/v3/integrations/nrpgx5"
-	"github.com/facily-tech/go-agent/v3/newrelic"
 	"github.com/jackc/pgx/v5"
+	"github.com/newrelic/go-agent/v3/integrations/nrpgx5"
+	"github.com/newrelic/go-agent/v3/newrelic"
 )
 
 func main() {

@@ -17,8 +17,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/facily-tech/go-agent/v3/internal"
-	"github.com/facily-tech/go-agent/v3/internal/logger"
+	"github.com/newrelic/go-agent/v3/internal"
+	"github.com/newrelic/go-agent/v3/internal/logger"
 )
 
 func TestCollectorResponseCodeError(t *testing.T) {

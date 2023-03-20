@@ -10,7 +10,7 @@ import (
 	"net/url"
 	"strings"
 
-	newrelic "github.com/facily-tech/go-agent/v3/newrelic"
+	newrelic "github.com/newrelic/go-agent/v3/newrelic"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 )

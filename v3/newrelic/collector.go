@@ -15,8 +15,8 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/facily-tech/go-agent/v3/internal"
-	"github.com/facily-tech/go-agent/v3/internal/logger"
+	"github.com/newrelic/go-agent/v3/internal"
+	"github.com/newrelic/go-agent/v3/internal/logger"
 )
 
 const (
@@ -64,17 +64,15 @@ type rpmControls struct {
 // Agent Behavior Summary:
 //
 // on connect/preconnect:
-//
-//	410 means shutdown
-//	200, 202 mean success (start run)
-//	all other response codes and errors mean try after backoff
+//     410 means shutdown
+//     200, 202 mean success (start run)
+//     all other response codes and errors mean try after backoff
 //
 // on harvest:
-//
-//	410 means shutdown
-//	401, 409 mean restart run
-//	408, 429, 500, 503 mean save data for next harvest
-//	all other response codes and errors discard the data and continue the current harvest
+//     410 means shutdown
+//     401, 409 mean restart run
+//     408, 429, 500, 503 mean save data for next harvest
+//     all other response codes and errors discard the data and continue the current harvest
 type rpmResponse struct {
 	statusCode int
 	body       []byte

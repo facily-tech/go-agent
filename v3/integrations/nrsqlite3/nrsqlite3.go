@@ -1,7 +1,6 @@
 // Copyright 2020 New Relic Corporation. All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-//go:build go1.10
 // +build go1.10
 
 // Package nrsqlite3 instruments https://github.com/mattn/go-sqlite3.
@@ -24,7 +23,7 @@
 // Then change the side-effect import to this package, and open "nrsqlite3" instead:
 //
 //	import (
-//		_ "github.com/facily-tech/go-agent/v3/integrations/nrsqlite3"
+//		_ "github.com/newrelic/go-agent/v3/integrations/nrsqlite3"
 //	)
 //
 //	func main() {
@@ -78,10 +77,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/facily-tech/go-agent/v3/internal"
-	"github.com/facily-tech/go-agent/v3/newrelic"
-	"github.com/facily-tech/go-agent/v3/newrelic/sqlparse"
 	sqlite3 "github.com/mattn/go-sqlite3"
+	"github.com/newrelic/go-agent/v3/internal"
+	"github.com/newrelic/go-agent/v3/newrelic"
+	"github.com/newrelic/go-agent/v3/newrelic/sqlparse"
 )
 
 var (
@@ -117,6 +116,7 @@ func init() {
 //				"sqlite3_mod_regexp",
 //			},
 //		}))
+//
 func InstrumentSQLDriver(d *sqlite3.SQLiteDriver) driver.Driver {
 	return newrelic.InstrumentSQLDriver(d, baseBuilder)
 }

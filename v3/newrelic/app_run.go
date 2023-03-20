@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/facily-tech/go-agent/v3/internal"
+	"github.com/newrelic/go-agent/v3/internal"
 )
 
 // appRun contains information regarding a single connection session with the

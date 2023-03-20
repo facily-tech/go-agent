@@ -8,12 +8,12 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/facily-tech/go-agent/v3/integrations/nrstan"
-	"github.com/facily-tech/go-agent/v3/internal"
-	"github.com/facily-tech/go-agent/v3/internal/integrationsupport"
-	newrelic "github.com/facily-tech/go-agent/v3/newrelic"
 	"github.com/nats-io/nats-streaming-server/server"
 	stan "github.com/nats-io/stan.go"
+	"github.com/newrelic/go-agent/v3/integrations/nrstan"
+	"github.com/newrelic/go-agent/v3/internal"
+	"github.com/newrelic/go-agent/v3/internal/integrationsupport"
+	newrelic "github.com/newrelic/go-agent/v3/newrelic"
 )
 
 const (

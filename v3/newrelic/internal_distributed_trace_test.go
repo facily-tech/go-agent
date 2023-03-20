@@ -14,8 +14,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/facily-tech/go-agent/v3/internal"
-	"github.com/facily-tech/go-agent/v3/internal/crossagent"
+	"github.com/newrelic/go-agent/v3/internal"
+	"github.com/newrelic/go-agent/v3/internal/crossagent"
 )
 
 func distributedTracingReplyFields(reply *internal.ConnectReply) {

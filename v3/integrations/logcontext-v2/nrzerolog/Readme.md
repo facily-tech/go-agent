@@ -27,8 +27,8 @@ The following example will shows how to install and set up your code to send log
 
 import (
     "github.com/rs/zerolog"
-    "github.com/facily-tech/go-agent/v3/newrelic"
-    "github.com/facily-tech/go-agent/v3/integrations/logcontext-v2/nrzerolog"
+    "github.com/newrelic/go-agent/v3/newrelic"
+    "github.com/newrelic/go-agent/v3/integrations/logcontext-v2/nrzerolog"
 )
 
 func main() {

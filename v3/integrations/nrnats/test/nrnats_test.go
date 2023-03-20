@@ -9,12 +9,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/facily-tech/go-agent/v3/integrations/nrnats"
-	"github.com/facily-tech/go-agent/v3/internal"
-	"github.com/facily-tech/go-agent/v3/internal/integrationsupport"
-	newrelic "github.com/facily-tech/go-agent/v3/newrelic"
 	"github.com/nats-io/nats-server/test"
 	nats "github.com/nats-io/nats.go"
+	"github.com/newrelic/go-agent/v3/integrations/nrnats"
+	"github.com/newrelic/go-agent/v3/internal"
+	"github.com/newrelic/go-agent/v3/internal/integrationsupport"
+	newrelic "github.com/newrelic/go-agent/v3/newrelic"
 )
 
 func TestMain(m *testing.M) {

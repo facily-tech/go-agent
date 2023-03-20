@@ -13,10 +13,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/facily-tech/go-agent/v3/internal"
-	"github.com/facily-tech/go-agent/v3/internal/logger"
-	"github.com/facily-tech/go-agent/v3/internal/sysinfo"
-	"github.com/facily-tech/go-agent/v3/internal/utilization"
+	"github.com/newrelic/go-agent/v3/internal"
+	"github.com/newrelic/go-agent/v3/internal/logger"
+	"github.com/newrelic/go-agent/v3/internal/sysinfo"
+	"github.com/newrelic/go-agent/v3/internal/utilization"
 )
 
 // Config contains Application and Transaction behavior settings.

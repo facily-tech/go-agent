@@ -10,8 +10,8 @@ import (
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/config"
 	"github.com/aws/aws-sdk-go-v2/service/s3"
-	nraws "github.com/facily-tech/go-agent/v3/integrations/nrawssdk-v2"
-	"github.com/facily-tech/go-agent/v3/newrelic"
+	nraws "github.com/newrelic/go-agent/v3/integrations/nrawssdk-v2"
+	"github.com/newrelic/go-agent/v3/newrelic"
 )
 
 func main() {

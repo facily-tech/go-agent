@@ -6,8 +6,8 @@ package nrlogrus
 import (
 	"bytes"
 
-	"github.com/facily-tech/go-agent/v3/internal"
-	newrelic "github.com/facily-tech/go-agent/v3/newrelic"
+	"github.com/newrelic/go-agent/v3/internal"
+	newrelic "github.com/newrelic/go-agent/v3/newrelic"
 	"github.com/sirupsen/logrus"
 )
 

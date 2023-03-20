@@ -1,7 +1,6 @@
 // Copyright 2020 New Relic Corporation. All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-//go:build go1.10
 // +build go1.10
 
 // Package nrmysql instruments https://github.com/go-sql-driver/mysql.
@@ -24,7 +23,7 @@
 // Then change the side-effect import to this package, and open "nrmysql" instead:
 //
 //	import (
-//		_ "github.com/facily-tech/go-agent/v3/integrations/nrmysql"
+//		_ "github.com/newrelic/go-agent/v3/integrations/nrmysql"
 //	)
 //
 //	func main() {
@@ -52,10 +51,10 @@ import (
 	"database/sql"
 	"net"
 
-	"github.com/facily-tech/go-agent/v3/internal"
-	"github.com/facily-tech/go-agent/v3/newrelic"
-	"github.com/facily-tech/go-agent/v3/newrelic/sqlparse"
 	"github.com/go-sql-driver/mysql"
+	"github.com/newrelic/go-agent/v3/internal"
+	"github.com/newrelic/go-agent/v3/newrelic"
+	"github.com/newrelic/go-agent/v3/newrelic/sqlparse"
 )
 
 var (

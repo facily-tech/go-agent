@@ -40,8 +40,8 @@ func (f stacktraceFrame) isAgent() bool {
 	// Note this is not a contains conditional rather than a prefix
 	// conditional to handle anonymous functions like:
 	// "go.(*struct { github.com/newrelic/go-agent.threadWithExtras }).NoticeError"
-	return strings.Contains(f.Name, "github.com/facily-tech/go-agent/v3/internal.") ||
-		strings.Contains(f.Name, "github.com/facily-tech/go-agent/v3/newrelic.")
+	return strings.Contains(f.Name, "github.com/newrelic/go-agent/v3/internal.") ||
+		strings.Contains(f.Name, "github.com/newrelic/go-agent/v3/newrelic.")
 }
 
 func (f stacktraceFrame) WriteJSON(buf *bytes.Buffer) {

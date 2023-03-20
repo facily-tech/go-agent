@@ -6,7 +6,7 @@ package newrelic
 import (
 	"bytes"
 
-	"github.com/facily-tech/go-agent/v3/internal/jsonx"
+	"github.com/newrelic/go-agent/v3/internal/jsonx"
 )
 
 type jsonWriter interface {

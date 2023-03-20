@@ -7,7 +7,7 @@ import (
 	"errors"
 	"time"
 
-	"github.com/facily-tech/go-agent/v3/internal"
+	"github.com/newrelic/go-agent/v3/internal"
 )
 
 type traceObserver interface {

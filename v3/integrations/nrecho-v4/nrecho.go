@@ -18,9 +18,9 @@ import (
 	"net/http"
 	"reflect"
 
-	"github.com/facily-tech/go-agent/v3/internal"
-	newrelic "github.com/facily-tech/go-agent/v3/newrelic"
 	"github.com/labstack/echo/v4"
+	"github.com/newrelic/go-agent/v3/internal"
+	newrelic "github.com/newrelic/go-agent/v3/newrelic"
 )
 
 func init() { internal.TrackUsage("integration", "framework", "echo") }
@@ -71,6 +71,7 @@ func WithSkipper(skipper Skipper) ConfigOption {
 //	e := echo.New()
 //	// Add the nrecho middleware before other middlewares or routes:
 //	e.Use(nrecho.MiddlewareWithConfig(nrecho.Config{App: app}))
+//
 func Middleware(app *newrelic.Application, opts ...ConfigOption) func(echo.HandlerFunc) echo.HandlerFunc {
 	if app == nil {
 		return func(next echo.HandlerFunc) echo.HandlerFunc {

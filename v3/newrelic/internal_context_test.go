@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/facily-tech/go-agent/v3/internal"
+	"github.com/newrelic/go-agent/v3/internal"
 )
 
 func TestWrapHandlerContext(t *testing.T) {

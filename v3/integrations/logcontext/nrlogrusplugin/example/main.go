@@ -8,8 +8,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/facily-tech/go-agent/v3/integrations/logcontext/nrlogrusplugin"
-	newrelic "github.com/facily-tech/go-agent/v3/newrelic"
+	"github.com/newrelic/go-agent/v3/integrations/logcontext/nrlogrusplugin"
+	newrelic "github.com/newrelic/go-agent/v3/newrelic"
 	"github.com/sirupsen/logrus"
 )
 
