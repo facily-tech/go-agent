@@ -1,4 +1,4 @@
-module github.com/newrelic/go-agent/v3/integrations/nrpgx5
+module github.com/facily-tech/go-agent/v3/integrations/nrpgx5
 
 go 1.17
 
