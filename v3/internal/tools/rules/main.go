@@ -9,7 +9,7 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/newrelic/go-agent/v3/internal"
+	"github.com/facily-tech/go-agent/v3/internal"
 )
 
 func fail(reason string) {

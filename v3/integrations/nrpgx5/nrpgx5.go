@@ -57,8 +57,8 @@ import (
 	"strconv"
 	"sync"
 
+	"github.com/facily-tech/go-agent/v3/internal"
 	"github.com/jackc/pgx/v5"
-	"github.com/newrelic/go-agent/v3/internal"
 	"github.com/newrelic/go-agent/v3/newrelic"
 	"github.com/newrelic/go-agent/v3/newrelic/sqlparse"
 )

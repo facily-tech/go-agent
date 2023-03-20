@@ -8,10 +8,10 @@ import (
 	"testing"
 
 	"github.com/egon12/pgsnap"
+	"github.com/facily-tech/go-agent/v3/internal"
+	"github.com/facily-tech/go-agent/v3/internal/integrationsupport"
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
-	"github.com/newrelic/go-agent/v3/internal"
-	"github.com/newrelic/go-agent/v3/internal/integrationsupport"
 	"github.com/newrelic/go-agent/v3/newrelic"
 	"github.com/stretchr/testify/assert"
 )
