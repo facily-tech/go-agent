@@ -105,7 +105,7 @@ func (t *Tracer) TraceConnectStart(ctx context.Context, data pgx.TraceConnectSta
 }
 
 // TraceConnectEnd method // implement pgx.ConnectTracer
-func (Tracer) TraceConnectEnd(ctx context.Context, data pgx.TraceConnectEndData) {}
+func (*Tracer) TraceConnectEnd(ctx context.Context, data pgx.TraceConnectEndData) {}
 
 // TraceQueryStart is called at the beginning of Query, QueryRow, and Exec calls. The returned context is used for the
 // rest of the call and will be passed to TraceQueryEnd. //implement pgx.QueryTracer
