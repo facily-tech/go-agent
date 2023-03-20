@@ -55,6 +55,7 @@ package nrpgx5
 import (
 	"context"
 	"strconv"
+	"sync"
 
 	"github.com/jackc/pgx/v5"
 	"github.com/newrelic/go-agent/v3/internal"
@@ -68,6 +69,7 @@ func init() {
 
 type (
 	Tracer struct {
+		mu          sync.Mutex
 		BaseSegment newrelic.DatastoreSegment
 		ParseQuery  func(segment *newrelic.DatastoreSegment, query string)
 	}
@@ -90,6 +92,8 @@ func NewTracer() *Tracer {
 // TraceConnectStart is called at the beginning of Connect and ConnectConfig calls. The returned context is used for
 // the rest of the call and will be passed to TraceConnectEnd. // implement pgx.ConnectTracer
 func (t *Tracer) TraceConnectStart(ctx context.Context, data pgx.TraceConnectStartData) context.Context {
+	t.mu.Lock()
+	defer t.mu.Unlock()
 	t.BaseSegment = newrelic.DatastoreSegment{
 		Product:      newrelic.DatastorePostgres,
 		Host:         data.ConnConfig.Host,
@@ -106,6 +110,8 @@ func (Tracer) TraceConnectEnd(ctx context.Context, data pgx.TraceConnectEndData)
 // TraceQueryStart is called at the beginning of Query, QueryRow, and Exec calls. The returned context is used for the
 // rest of the call and will be passed to TraceQueryEnd. //implement pgx.QueryTracer
 func (t *Tracer) TraceQueryStart(ctx context.Context, conn *pgx.Conn, data pgx.TraceQueryStartData) context.Context {
+	t.mu.Lock()
+	defer t.mu.Unlock()
 	segment := t.BaseSegment
 	segment.StartTime = newrelic.FromContext(ctx).StartSegmentNow()
 	segment.ParameterizedQuery = data.SQL
@@ -137,6 +143,8 @@ func (t *Tracer) getQueryParameters(args []interface{}) map[string]interface{} {
 // TraceBatchStart is called at the beginning of SendBatch calls. The returned context is used for the
 // rest of the call and will be passed to TraceBatchQuery and TraceBatchEnd. // implement pgx.BatchTracer
 func (t *Tracer) TraceBatchStart(ctx context.Context, conn *pgx.Conn, data pgx.TraceBatchStartData) context.Context {
+	t.mu.Lock()
+	defer t.mu.Unlock()
 	segment := t.BaseSegment
 	segment.StartTime = newrelic.FromContext(ctx).StartSegmentNow()
 	segment.Operation = "batch"
