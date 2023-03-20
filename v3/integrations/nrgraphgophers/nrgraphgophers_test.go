@@ -11,12 +11,12 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/facily-tech/go-agent/v3/internal"
+	"github.com/facily-tech/go-agent/v3/internal/integrationsupport"
+	"github.com/facily-tech/go-agent/v3/newrelic"
 	graphql "github.com/graph-gophers/graphql-go"
 	"github.com/graph-gophers/graphql-go/introspection"
 	"github.com/graph-gophers/graphql-go/relay"
-	"github.com/newrelic/go-agent/v3/internal"
-	"github.com/newrelic/go-agent/v3/internal/integrationsupport"
-	"github.com/newrelic/go-agent/v3/newrelic"
 )
 
 func TestFieldManagementSync(t *testing.T) {

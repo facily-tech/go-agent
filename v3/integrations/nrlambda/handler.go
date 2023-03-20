@@ -24,9 +24,9 @@ import (
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/aws/aws-lambda-go/lambda/handlertrace"
 	"github.com/aws/aws-lambda-go/lambdacontext"
-	"github.com/newrelic/go-agent/v3/internal"
-	"github.com/newrelic/go-agent/v3/internal/integrationsupport"
-	"github.com/newrelic/go-agent/v3/newrelic"
+	"github.com/facily-tech/go-agent/v3/internal"
+	"github.com/facily-tech/go-agent/v3/internal/integrationsupport"
+	"github.com/facily-tech/go-agent/v3/newrelic"
 )
 
 type response struct {
@@ -168,7 +168,6 @@ func Wrap(handler interface{}, app *newrelic.Application) lambda.Handler {
 // With:
 //
 //	nrlambda.Start(myhandler, app)
-//
 func Start(handler interface{}, app *newrelic.Application) {
 	lambda.StartHandler(Wrap(handler, app))
 }
@@ -180,7 +179,6 @@ func Start(handler interface{}, app *newrelic.Application) {
 // With:
 //
 //	nrlambda.StartHandler(myhandler, app)
-//
 func StartHandler(handler lambda.Handler, app *newrelic.Application) {
 	lambda.StartHandler(WrapHandler(handler, app))
 }

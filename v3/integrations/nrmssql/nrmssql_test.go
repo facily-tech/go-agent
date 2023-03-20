@@ -1,7 +1,7 @@
 package nrmssql
 
 import (
-	"github.com/newrelic/go-agent/v3/newrelic"
+	"github.com/facily-tech/go-agent/v3/newrelic"
 	"testing"
 )
 

@@ -5,14 +5,13 @@
 //
 // This package improves the class and stack-trace fields of pkg/error errors
 // when they are recorded with Transaction.NoticeError.
-//
 package nrpkgerrors
 
 import (
 	"fmt"
 
-	"github.com/newrelic/go-agent/v3/internal"
-	newrelic "github.com/newrelic/go-agent/v3/newrelic"
+	"github.com/facily-tech/go-agent/v3/internal"
+	newrelic "github.com/facily-tech/go-agent/v3/newrelic"
 	"github.com/pkg/errors"
 )
 

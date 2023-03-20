@@ -16,7 +16,7 @@ func anotherFunction() {
 
 func TestCodeLocation(t *testing.T) {
 	loc1 := ThisCodeLocation()
-	if loc1.LineNo != 18 || loc1.Function != "github.com/newrelic/go-agent/v3/newrelic.TestCodeLocation" || !strings.HasSuffix(loc1.FilePath, "/go-agent/v3/newrelic/code_level_metrics_test.go") {
+	if loc1.LineNo != 18 || loc1.Function != "github.com/facily-tech/go-agent/v3/newrelic.TestCodeLocation" || !strings.HasSuffix(loc1.FilePath, "/go-agent/v3/newrelic/code_level_metrics_test.go") {
 		t.Errorf("CodeLocation() returned %v", loc1)
 	}
 
@@ -24,7 +24,7 @@ func TestCodeLocation(t *testing.T) {
 	if err != nil {
 		t.Errorf("FunctionLocation() returned error %v", err)
 	}
-	if loc2.LineNo != 13 || loc2.Function != "github.com/newrelic/go-agent/v3/newrelic.anotherFunction" || !strings.HasSuffix(loc2.FilePath, "/go-agent/v3/newrelic/code_level_metrics_test.go") {
+	if loc2.LineNo != 13 || loc2.Function != "github.com/facily-tech/go-agent/v3/newrelic.anotherFunction" || !strings.HasSuffix(loc2.FilePath, "/go-agent/v3/newrelic/code_level_metrics_test.go") {
 		t.Errorf("FunctionLocation() returned %v", loc2)
 	}
 }
@@ -43,7 +43,7 @@ func TestClosureCLM(t *testing.T) {
 	if err != nil {
 		t.Errorf("FunctionLocation of closure: %v", err)
 	}
-	if l.LineNo != 40 || l.Function != "github.com/newrelic/go-agent/v3/newrelic.TestClosureCLM.func1" || !strings.HasSuffix(l.FilePath, "/go-agent/v3/newrelic/code_level_metrics_test.go") {
+	if l.LineNo != 40 || l.Function != "github.com/facily-tech/go-agent/v3/newrelic.TestClosureCLM.func1" || !strings.HasSuffix(l.FilePath, "/go-agent/v3/newrelic/code_level_metrics_test.go") {
 		t.Errorf("closure FunctionLocation() returned %v", l)
 	}
 }
@@ -56,13 +56,13 @@ func TestBasicCaching(t *testing.T) {
 		t.Errorf("cached FunctionLocation error %v", err)
 	}
 
-	if l.LineNo != 13 || l.Function != "github.com/newrelic/go-agent/v3/newrelic.anotherFunction" || !strings.HasSuffix(l.FilePath, "/go-agent/v3/newrelic/code_level_metrics_test.go") {
+	if l.LineNo != 13 || l.Function != "github.com/facily-tech/go-agent/v3/newrelic.anotherFunction" || !strings.HasSuffix(l.FilePath, "/go-agent/v3/newrelic/code_level_metrics_test.go") {
 		t.Errorf("FunctionLocation() returned %v", l)
 	}
 
 	if c.location == nil {
 		t.Errorf("FunctionLocation cache location is nil")
-	} else if c.location.LineNo != 13 || c.location.Function != "github.com/newrelic/go-agent/v3/newrelic.anotherFunction" || !strings.HasSuffix(c.location.FilePath, "/go-agent/v3/newrelic/code_level_metrics_test.go") {
+	} else if c.location.LineNo != 13 || c.location.Function != "github.com/facily-tech/go-agent/v3/newrelic.anotherFunction" || !strings.HasSuffix(c.location.FilePath, "/go-agent/v3/newrelic/code_level_metrics_test.go") {
 		t.Errorf("FunctionLocation cache value is wrong %v", *c.location)
 	}
 
@@ -76,7 +76,7 @@ func TestCachedCodeLocation(t *testing.T) {
 	c2 := NewCachedCodeLocation()
 
 	loc1 := c.ThisCodeLocation()
-	if loc1.LineNo != 78 || loc1.Function != "github.com/newrelic/go-agent/v3/newrelic.TestCachedCodeLocation" || !strings.HasSuffix(loc1.FilePath, "/go-agent/v3/newrelic/code_level_metrics_test.go") {
+	if loc1.LineNo != 78 || loc1.Function != "github.com/facily-tech/go-agent/v3/newrelic.TestCachedCodeLocation" || !strings.HasSuffix(loc1.FilePath, "/go-agent/v3/newrelic/code_level_metrics_test.go") {
 		t.Errorf("CodeLocation() returned %v", loc1)
 	}
 
@@ -90,7 +90,7 @@ func TestCachedCodeLocation(t *testing.T) {
 	if err != nil {
 		t.Errorf("FunctionLocation() returned error %v", err)
 	}
-	if loc2.LineNo != 78 || loc2.Function != "github.com/newrelic/go-agent/v3/newrelic.TestCachedCodeLocation" || !strings.HasSuffix(loc2.FilePath, "/go-agent/v3/newrelic/code_level_metrics_test.go") {
+	if loc2.LineNo != 78 || loc2.Function != "github.com/facily-tech/go-agent/v3/newrelic.TestCachedCodeLocation" || !strings.HasSuffix(loc2.FilePath, "/go-agent/v3/newrelic/code_level_metrics_test.go") {
 		t.Errorf("FunctionLocation() returned %v", loc2)
 	}
 
@@ -100,7 +100,7 @@ func TestCachedCodeLocation(t *testing.T) {
 	if err != nil {
 		t.Errorf("FunctionLocation() returned error %v", err)
 	}
-	if loc2.LineNo != 13 || loc2.Function != "github.com/newrelic/go-agent/v3/newrelic.anotherFunction" || !strings.HasSuffix(loc2.FilePath, "/go-agent/v3/newrelic/code_level_metrics_test.go") {
+	if loc2.LineNo != 13 || loc2.Function != "github.com/facily-tech/go-agent/v3/newrelic.anotherFunction" || !strings.HasSuffix(loc2.FilePath, "/go-agent/v3/newrelic/code_level_metrics_test.go") {
 		t.Errorf("FunctionLocation() returned %v", loc2)
 	}
 }
@@ -116,7 +116,7 @@ func TestTraceOptions(t *testing.T) {
 	if o.LocationOverride == nil {
 		t.Errorf("failed to set a location")
 	} else {
-		if o.LocationOverride.LineNo != 110 || o.LocationOverride.Function != "github.com/newrelic/go-agent/v3/newrelic.TestTraceOptions" || !strings.HasSuffix(o.LocationOverride.FilePath, "/go-agent/v3/newrelic/code_level_metrics_test.go") {
+		if o.LocationOverride.LineNo != 110 || o.LocationOverride.Function != "github.com/facily-tech/go-agent/v3/newrelic.TestTraceOptions" || !strings.HasSuffix(o.LocationOverride.FilePath, "/go-agent/v3/newrelic/code_level_metrics_test.go") {
 			t.Errorf("function location set to %v", *o.LocationOverride)
 		}
 	}
@@ -147,7 +147,7 @@ func TestTraceOptions2(t *testing.T) {
 	if o.LocationOverride == nil {
 		t.Errorf("failed to set a location")
 	} else {
-		if o.LocationOverride.LineNo != 13 || o.LocationOverride.Function != "github.com/newrelic/go-agent/v3/newrelic.anotherFunction" || !strings.HasSuffix(o.LocationOverride.FilePath, "/go-agent/v3/newrelic/code_level_metrics_test.go") {
+		if o.LocationOverride.LineNo != 13 || o.LocationOverride.Function != "github.com/facily-tech/go-agent/v3/newrelic.anotherFunction" || !strings.HasSuffix(o.LocationOverride.FilePath, "/go-agent/v3/newrelic/code_level_metrics_test.go") {
 			t.Errorf("function location set to %v", *o.LocationOverride)
 		}
 	}
@@ -178,7 +178,7 @@ func TestNullCache(t *testing.T) {
 		t.Errorf("cached FunctionLocation error %v", err)
 	}
 
-	if l.LineNo != 13 || l.Function != "github.com/newrelic/go-agent/v3/newrelic.anotherFunction" || !strings.HasSuffix(l.FilePath, "/go-agent/v3/newrelic/code_level_metrics_test.go") {
+	if l.LineNo != 13 || l.Function != "github.com/facily-tech/go-agent/v3/newrelic.anotherFunction" || !strings.HasSuffix(l.FilePath, "/go-agent/v3/newrelic/code_level_metrics_test.go") {
 		t.Errorf("FunctionLocation() returned %v", l)
 	}
 

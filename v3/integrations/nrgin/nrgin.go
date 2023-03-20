@@ -17,9 +17,9 @@ package nrgin
 import (
 	"net/http"
 
+	"github.com/facily-tech/go-agent/v3/internal"
+	newrelic "github.com/facily-tech/go-agent/v3/newrelic"
 	"github.com/gin-gonic/gin"
-	"github.com/newrelic/go-agent/v3/internal"
-	newrelic "github.com/newrelic/go-agent/v3/newrelic"
 )
 
 func init() { internal.TrackUsage("integration", "framework", "gin", "v1") }

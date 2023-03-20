@@ -33,8 +33,8 @@ import (
 	awsmiddle "github.com/aws/aws-sdk-go-v2/aws/middleware"
 	smithymiddle "github.com/aws/smithy-go/middleware"
 	smithyhttp "github.com/aws/smithy-go/transport/http"
-	"github.com/newrelic/go-agent/v3/internal/integrationsupport"
-	"github.com/newrelic/go-agent/v3/newrelic"
+	"github.com/facily-tech/go-agent/v3/internal/integrationsupport"
+	"github.com/facily-tech/go-agent/v3/newrelic"
 )
 
 type nrMiddleware struct {
@@ -120,24 +120,24 @@ func (m nrMiddleware) deserializeMiddleware(stack *smithymiddle.Stack) error {
 // To see segments and spans for all AWS invocations, call AppendMiddlewares
 // with the AWS Config `apiOptions` and provide nil for `txn`. For example:
 //
-//  awsConfig, err := config.LoadDefaultConfig(ctx)
-//  if err != nil {
-//      log.Fatal(err)
-//  }
-//  nraws.AppendMiddlewares(&awsConfig.APIOptions, nil)
+//	awsConfig, err := config.LoadDefaultConfig(ctx)
+//	if err != nil {
+//	    log.Fatal(err)
+//	}
+//	nraws.AppendMiddlewares(&awsConfig.APIOptions, nil)
 //
 // If do not want the transaction to be retrived from the context, you can
 // explicitly set `txn`. For example:
 //
-//  awsConfig, err := config.LoadDefaultConfig(ctx)
-//  if err != nil {
-//      log.Fatal(err)
-//  }
+//	awsConfig, err := config.LoadDefaultConfig(ctx)
+//	if err != nil {
+//	    log.Fatal(err)
+//	}
 //
-//  ...
+//	...
 //
-//  txn := loadNewRelicTransaction()
-//  nraws.AppendMiddlewares(&awsConfig.APIOptions, txn)
+//	txn := loadNewRelicTransaction()
+//	nraws.AppendMiddlewares(&awsConfig.APIOptions, txn)
 func AppendMiddlewares(apiOptions *[]func(*smithymiddle.Stack) error, txn *newrelic.Transaction) {
 	m := nrMiddleware{txn: txn}
 	*apiOptions = append(*apiOptions, m.deserializeMiddleware)

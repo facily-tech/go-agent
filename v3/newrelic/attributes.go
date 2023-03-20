@@ -83,7 +83,7 @@ const (
 //
 // When a message is consumed (for example from Kafka or RabbitMQ), supported
 // instrumentation packages -- i.e. those found in the v3/integrations
-// (https://godoc.org/github.com/newrelic/go-agent/v3/integrations) directory --
+// (https://godoc.org/github.com/facily-tech/go-agent/v3/integrations) directory --
 // will add these attributes automatically.  AttributeMessageExchangeType,
 // AttributeMessageReplyTo, and AttributeMessageCorrelationID are disabled
 // by default.  To see these attributes added to all destinations, you must add
@@ -97,7 +97,7 @@ const (
 //
 // When not using a supported instrumentation package, you can add these
 // attributes manually using the Transaction.AddAttribute
-// (https://godoc.org/github.com/newrelic/go-agent/v3/newrelic#Transaction.AddAttribute)
+// (https://godoc.org/github.com/facily-tech/go-agent/v3/newrelic#Transaction.AddAttribute)
 // API.  In this case, these attributes will be included on all destintations
 // by default.
 //

@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/newrelic/go-agent/v3/internal/logcontext"
+	"github.com/facily-tech/go-agent/v3/internal/logcontext"
 )
 
 const (

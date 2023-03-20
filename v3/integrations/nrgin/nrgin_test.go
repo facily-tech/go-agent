@@ -10,14 +10,14 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/facily-tech/go-agent/v3/internal"
+	"github.com/facily-tech/go-agent/v3/internal/integrationsupport"
+	"github.com/facily-tech/go-agent/v3/newrelic"
 	"github.com/gin-gonic/gin"
-	"github.com/newrelic/go-agent/v3/internal"
-	"github.com/newrelic/go-agent/v3/internal/integrationsupport"
-	"github.com/newrelic/go-agent/v3/newrelic"
 )
 
 var (
-	pkg = "github.com/newrelic/go-agent/v3/integrations/nrgin"
+	pkg = "github.com/facily-tech/go-agent/v3/integrations/nrgin"
 )
 
 func hello(c *gin.Context) {

@@ -18,9 +18,9 @@ import (
 	"net/http"
 	"reflect"
 
+	"github.com/facily-tech/go-agent/v3/internal"
+	newrelic "github.com/facily-tech/go-agent/v3/newrelic"
 	"github.com/labstack/echo"
-	"github.com/newrelic/go-agent/v3/internal"
-	newrelic "github.com/newrelic/go-agent/v3/newrelic"
 )
 
 func init() { internal.TrackUsage("integration", "framework", "echo") }
@@ -51,7 +51,6 @@ func transactionName(c echo.Context) string {
 //	e := echo.New()
 //	// Add the nrecho middleware before other middlewares or routes:
 //	e.Use(nrecho.Middleware(app))
-//
 func Middleware(app *newrelic.Application) func(echo.HandlerFunc) echo.HandlerFunc {
 
 	if nil == app {

@@ -41,7 +41,7 @@ for dir in $DIRS; do
   cd "$pwd/$dir"
 
   # replace go-agent with local pull
-  go mod edit -replace github.com/newrelic/go-agent/v3="$pwd"/v3
+  go mod edit -replace github.com/facily-tech/go-agent/v3="$pwd"/v3
 
   # manage dependencies
   go mod tidy -go=$shortVersion -compat=$shortVersion

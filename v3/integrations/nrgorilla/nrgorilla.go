@@ -14,9 +14,9 @@ package nrgorilla
 import (
 	"net/http"
 
+	"github.com/facily-tech/go-agent/v3/internal"
+	newrelic "github.com/facily-tech/go-agent/v3/newrelic"
 	"github.com/gorilla/mux"
-	"github.com/newrelic/go-agent/v3/internal"
-	newrelic "github.com/newrelic/go-agent/v3/newrelic"
 )
 
 func init() { internal.TrackUsage("integration", "framework", "gorilla", "v1") }
@@ -91,7 +91,7 @@ func InstrumentRoutes(r *mux.Router, app *newrelic.Application) *mux.Router {
 // Note that mux.MiddlewareFuncs are not called for the NotFoundHandler or
 // MethodNotAllowedHandler.  To instrument these handlers, use
 // newrelic.WrapHandle
-// (https://godoc.org/github.com/newrelic/go-agent/v3/newrelic#WrapHandle).
+// (https://godoc.org/github.com/facily-tech/go-agent/v3/newrelic#WrapHandle).
 //
 // Note that if you are moving from the now deprecated InstrumentRoutes to this
 // Middleware, the reported time of your transactions may increase.  This is

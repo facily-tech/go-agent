@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/facily-tech/go-agent/v3/integrations/nrnats"
+	"github.com/facily-tech/go-agent/v3/newrelic"
 	"github.com/nats-io/nats.go"
-	"github.com/newrelic/go-agent/v3/integrations/nrnats"
-	"github.com/newrelic/go-agent/v3/newrelic"
 )
 
 func currentTransaction() *newrelic.Transaction { return nil }

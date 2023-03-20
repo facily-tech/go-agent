@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/newrelic/go-agent/v3/internal"
-	"github.com/newrelic/go-agent/v3/internal/cat"
-	"github.com/newrelic/go-agent/v3/internal/logger"
+	"github.com/facily-tech/go-agent/v3/internal"
+	"github.com/facily-tech/go-agent/v3/internal/cat"
+	"github.com/facily-tech/go-agent/v3/internal/logger"
 )
 
 func float64Ptr(f float64) *float64 { return &f }

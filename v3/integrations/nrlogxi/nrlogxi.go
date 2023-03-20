@@ -8,9 +8,9 @@
 package nrlogxi
 
 import (
+	"github.com/facily-tech/go-agent/v3/internal"
+	newrelic "github.com/facily-tech/go-agent/v3/newrelic"
 	log "github.com/mgutz/logxi/v1"
-	"github.com/newrelic/go-agent/v3/internal"
-	newrelic "github.com/newrelic/go-agent/v3/newrelic"
 )
 
 func init() { internal.TrackUsage("integration", "logging", "logxi", "v1") }

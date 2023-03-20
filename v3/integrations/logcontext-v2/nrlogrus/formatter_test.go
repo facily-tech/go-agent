@@ -6,11 +6,11 @@ import (
 	"io"
 	"testing"
 
-	"github.com/newrelic/go-agent/v3/internal"
-	"github.com/newrelic/go-agent/v3/internal/integrationsupport"
-	"github.com/newrelic/go-agent/v3/internal/logcontext"
-	"github.com/newrelic/go-agent/v3/internal/sysinfo"
-	"github.com/newrelic/go-agent/v3/newrelic"
+	"github.com/facily-tech/go-agent/v3/internal"
+	"github.com/facily-tech/go-agent/v3/internal/integrationsupport"
+	"github.com/facily-tech/go-agent/v3/internal/logcontext"
+	"github.com/facily-tech/go-agent/v3/internal/sysinfo"
+	"github.com/facily-tech/go-agent/v3/newrelic"
 	"github.com/sirupsen/logrus"
 )
 

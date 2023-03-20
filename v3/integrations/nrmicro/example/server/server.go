@@ -10,10 +10,10 @@ import (
 	"os"
 	"time"
 
+	"github.com/facily-tech/go-agent/v3/integrations/nrmicro"
+	proto "github.com/facily-tech/go-agent/v3/integrations/nrmicro/example/proto"
+	newrelic "github.com/facily-tech/go-agent/v3/newrelic"
 	"github.com/micro/go-micro"
-	"github.com/newrelic/go-agent/v3/integrations/nrmicro"
-	proto "github.com/newrelic/go-agent/v3/integrations/nrmicro/example/proto"
-	newrelic "github.com/newrelic/go-agent/v3/newrelic"
 )
 
 // Greeter is the server struct

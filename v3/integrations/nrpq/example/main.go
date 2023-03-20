@@ -22,8 +22,8 @@ import (
 	"os"
 	"time"
 
-	_ "github.com/newrelic/go-agent/v3/integrations/nrpq"
-	newrelic "github.com/newrelic/go-agent/v3/newrelic"
+	_ "github.com/facily-tech/go-agent/v3/integrations/nrpq"
+	newrelic "github.com/facily-tech/go-agent/v3/newrelic"
 )
 
 func main() {
