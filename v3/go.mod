@@ -1,9 +1,10 @@
-module github.com/newrelic/go-agent/v3
+module github.com/facily-tech/go-agent/v3
 
 go 1.17
 
 require (
 	github.com/golang/protobuf v1.5.2
+	github.com/newrelic/go-agent/v3 v3.20.4
 	google.golang.org/grpc v1.49.0
 )
 
