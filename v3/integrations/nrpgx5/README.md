@@ -3,7 +3,7 @@
 Package `nrpgx` instruments https://github.com/jackc/pgx/v5.
 
 ```go
-import "github.com/newrelic/go-agent/v3/integrations/nrpgx5"
+import "github.com/facily-tech/go-agent/v3/integrations/nrpgx5"
 ```
 
 For more information, see
